@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 from __future__ import division
 
 import gevent.monkey
-monkey.patch_all()
+gevent.monkey.patch_all()
 
 import argparse
 import os
