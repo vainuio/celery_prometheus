@@ -11,4 +11,4 @@ COPY . .
 RUN pip install -e .
 
 USER celery
-ENTRYPOINT /usr/local/bin/celery_prometheus
+ENTRYPOINT ["/usr/local/bin/celery_prometheus"]
