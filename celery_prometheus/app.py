@@ -25,6 +25,9 @@ from prometheus_client import (
     Counter
 )
 
+#Configure loglevel with envs
+loglevel = os.environ.get('LOGLEVEL', 'WARNING').upper()
+logging.basicConfig(level=loglevel)
 
 parser = argparse.ArgumentParser(description='Listens to Celery events and exports them to Prometheus')
 
